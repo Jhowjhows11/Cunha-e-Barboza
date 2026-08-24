@@ -1,0 +1,6 @@
+{
+  "name": "Cunha & Barboza Pavimentação",
+  "description": "Site institucional de alta conversão para Cunha & Barboza Pavimentação - Especialistas em Pavimentação Asfáltica e Infraestrutura.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
