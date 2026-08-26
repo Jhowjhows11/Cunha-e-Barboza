@@ -17,15 +17,18 @@ export const Hero: React.FC<HeroProps> = () => {
         {/* Right-Side Compactor Video Background Container */}
         <div className="absolute right-0 top-0 bottom-0 w-[68%] h-full z-0 overflow-hidden pointer-events-none">
           
-          {/* Streamable Video iframe */}
-          <div className="absolute top-[60%] -right-[15%] -translate-y-1/2 w-[125%] h-[100%] opacity-100">
-            <iframe
-              className="w-full h-full border-0 object-cover pointer-events-none scale-[1.3]"
-              src="https://streamable.com/e/lponj7?autoplay=1&loop=1&muted=1&nocontrols=1"
-              title="Vídeo Operacional Pavimentação Cunha & Barboza"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            />
+          {/* Native Autoplay Video Tag without Controls */}
+          <div className="absolute inset-0 w-full h-full">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover pointer-events-none"
+            >
+              <source src="/videos/Rolo%20compactador.mp4" type="video/mp4" />
+              <source src="/videos/pavimentacao.mp4" type="video/mp4" />
+            </video>
           </div>
 
           {/* Inverted Half-Moon Curved Overlay */}
@@ -119,15 +122,18 @@ export const Hero: React.FC<HeroProps> = () => {
       <div className="lg:hidden relative min-h-[90vh] flex items-center pt-28 pb-16 w-full">
         {/* Background Video Container (Full width & height) */}
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
-          {/* Scaled video iframe to cover full mobile background - shifted down by 10% */}
-          <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280%] sm:w-[180%] h-[130%] opacity-100">
-            <iframe
-              className="w-full h-full border-0 object-cover pointer-events-none scale-[1.3]"
-              src="https://streamable.com/e/lponj7?autoplay=1&loop=1&muted=1&nocontrols=1"
-              title="Vídeo Operacional Pavimentação Cunha & Barboza Mobile"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            />
+          {/* Native Autoplay Video Tag without Controls */}
+          <div className="absolute inset-0 w-full h-full">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover pointer-events-none"
+            >
+              <source src="/videos/Rolo%20compactador.mp4" type="video/mp4" />
+              <source src="/videos/pavimentacao.mp4" type="video/mp4" />
+            </video>
           </div>
 
           {/* White Veil Gradient Overlay for Mobile - Strong Opaque White at Top/Left, dissolving smoothly downwards and towards top-right */}
