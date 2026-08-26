@@ -106,10 +106,10 @@ export const Hero: React.FC<HeroProps> = () => {
 
               <a
                 id="hero-cta-services"
-                href="#servicos"
+                href="#autoridade"
                 className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-white hover:bg-slate-50 text-[#080E21] font-heading font-bold text-xs rounded-full border-2 border-[#080E21] hover:border-red-600 transition-all duration-200 shadow-xs"
               >
-                <span>NOSSOS SERVIÇOS</span>
+                <span>NOSSA ENGENHARIA</span>
                 <ArrowRight className="w-3 h-3 text-red-600" />
               </a>
             </div>
@@ -213,10 +213,10 @@ export const Hero: React.FC<HeroProps> = () => {
               {/* Secondary CTA */}
               <a
                 id="hero-cta-services-mobile"
-                href="#servicos"
+                href="#autoridade"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/80 hover:bg-white backdrop-blur-md text-[#080E21] font-heading font-bold text-xs sm:text-sm tracking-wider rounded-xl border border-slate-300 hover:border-red-600 transition-all duration-200 shadow-xs"
               >
-                <span>NOSSOS SERVIÇOS</span>
+                <span>NOSSA ENGENHARIA</span>
                 <ArrowRight className="w-4 h-4 text-red-600" />
               </a>
             </div>

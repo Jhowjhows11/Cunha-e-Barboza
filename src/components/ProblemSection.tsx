@@ -37,17 +37,19 @@ export const ProblemSection: React.FC = () => {
 
         {/* 2-Column Composition */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Streamable Video element extended 40% behind text boxes and shifted 20% left and 10% up, without any border or rounded frame box */}
+          {/* Left Column: Local Video (Asphato.mp4) maintaining exact dimensions and positioning */}
           <div className="lg:col-span-6 relative z-0">
-            <div className="relative overflow-hidden w-full lg:w-[140%] aspect-video bg-transparent pointer-events-none select-none -translate-x-[20%] -translate-y-[10%]">
-              <iframe
-                src="https://streamable.com/e/yng1hg?autoplay=1&loop=1&muted=1&nocontrols=1"
-                title="Vídeo Operacional Diagnóstico de Pavimentação"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-                className="w-full h-full border-0 border-none outline-none object-cover pointer-events-none scale-[1.4]"
-              />
-              {/* Invisible Overlay Shield to guarantee no hover controls or interactions */}
+            <div className="relative overflow-hidden w-[110%] lg:w-[154%] aspect-video bg-transparent pointer-events-none select-none translate-x-[1%] lg:-translate-x-[20%] -translate-y-[10%] rounded-xl">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover pointer-events-none"
+              >
+                <source src="/videos/Asphato.mp4" type="video/mp4" />
+              </video>
+              {/* Invisible Overlay Shield */}
               <div className="absolute inset-0 bg-transparent pointer-events-none z-10" />
             </div>
           </div>

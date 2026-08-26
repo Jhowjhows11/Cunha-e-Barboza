@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, MessageSquare, Shield, ChevronRight } from 'lucide-react';
+import { Menu, X, MessageSquare, ChevronRight } from 'lucide-react';
 import { COMPANY_INFO } from '../data/content';
 
 interface NavbarProps {
   onOpenEstimator?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimator }) => {
+export const Navbar: React.FC<NavbarProps> = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -20,12 +20,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimator }) => {
 
   const navLinks = [
     { label: 'Início', href: '#inicio' },
-    { label: 'Serviços', href: '#servicos' },
-    { label: 'Processo', href: '#processo' },
-    { label: 'Obras', href: '#obras' },
-    { label: 'Diferenciais', href: '#diferenciais' },
-    { label: 'Segmentos', href: '#segmentos' },
-    { label: 'Contato', href: '#contato' }
+    { label: 'Diagnóstico', href: '#problemas' },
+    { label: 'Engenharia', href: '#autoridade' },
+    { label: 'Contato', href: '#main-footer' }
   ];
 
   return (
@@ -58,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimator }) => {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-3 xl:gap-6" aria-label="Navegação principal">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8" aria-label="Navegação principal">
             {navLinks.map((link, idx) => (
               <a
                 key={link.href}
@@ -85,17 +82,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimator }) => {
               <MessageSquare className="w-4 h-4" />
               <span>Solicitar Orçamento</span>
             </a>
-
-            {onOpenEstimator && (
-              <button
-                type="button"
-                onClick={onOpenEstimator}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-heading font-bold uppercase tracking-wider text-[#080E21] bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-full transition-all"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                <span className="hidden md:inline">Simulador</span>
-              </button>
-            )}
           </div>
 
           {/* Mobile Menu Hamburger Button */}
@@ -117,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimator }) => {
       {mobileMenuOpen && (
         <div 
           id="mobile-menu-drawer"
-          className="sm:hidden bg-[#080E21] border-b border-blue-900/60 px-5 pt-4 pb-6 mt-3 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200"
+          className="lg:hidden bg-[#080E21] border-b border-blue-900/60 px-5 pt-4 pb-6 mt-3 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200"
         >
           <div className="flex flex-col space-y-2">
             {navLinks.map((link) => (
@@ -133,19 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimator }) => {
             ))}
           </div>
 
-          <div className="pt-3 border-t border-blue-900/60 space-y-2">
-            {onOpenEstimator && (
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenEstimator();
-                }}
-                className="w-full flex items-center justify-center gap-2 py-3 bg-blue-950 hover:bg-blue-900 text-slate-200 border border-blue-800 font-semibold text-sm rounded"
-              >
-                Simulador Técnico de Obra
-              </button>
-            )}
+          <div className="pt-3 border-t border-blue-900/60">
             <a
               href={COMPANY_INFO.whatsappUrl()}
               target="_blank"

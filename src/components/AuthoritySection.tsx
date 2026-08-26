@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, CheckCircle2, ShieldCheck, Hammer, Activity, Wrench, Star } from 'lucide-react';
+import { Layers, CheckCircle2, ShieldCheck, Activity, Star } from 'lucide-react';
 import { COMPANY_INFO } from '../data/content';
 
 export const AuthoritySection: React.FC = () => {
@@ -10,65 +10,6 @@ export const AuthoritySection: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Prominent Numbers & Metrics Strip (from Reference Image) */}
-        <div className="mb-20 grid grid-cols-2 lg:grid-cols-4 gap-6 p-6 sm:p-8 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 p-2">
-            <div className="p-3 bg-red-600/10 text-red-600 rounded-xl shrink-0">
-              <ShieldCheck className="w-8 h-8" />
-            </div>
-            <div>
-              <div className="font-heading font-black text-2xl sm:text-3xl text-[#080E21]">
-                +15
-              </div>
-              <p className="text-xs font-heading font-bold uppercase tracking-wider text-slate-600">
-                Anos de Experiência
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 p-2">
-            <div className="p-3 bg-amber-500/10 text-amber-600 rounded-xl shrink-0">
-              <Hammer className="w-8 h-8" />
-            </div>
-            <div>
-              <div className="font-heading font-black text-2xl sm:text-3xl text-[#080E21]">
-                +500
-              </div>
-              <p className="text-xs font-heading font-bold uppercase tracking-wider text-slate-600">
-                Obras Concluídas
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 p-2">
-            <div className="p-3 bg-blue-900/10 text-blue-900 rounded-xl shrink-0">
-              <Activity className="w-8 h-8" />
-            </div>
-            <div>
-              <div className="font-heading font-black text-2xl sm:text-3xl text-[#080E21]">
-                +1.000.000
-              </div>
-              <p className="text-xs font-heading font-bold uppercase tracking-wider text-slate-600">
-                m² de Pavimentação Executados
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 p-2">
-            <div className="p-3 bg-red-600/10 text-red-600 rounded-xl shrink-0">
-              <Wrench className="w-8 h-8" />
-            </div>
-            <div>
-              <div className="font-heading font-black text-xl sm:text-2xl text-[#080E21]">
-                EQUIPE
-              </div>
-              <p className="text-xs font-heading font-bold uppercase tracking-wider text-slate-600">
-                Especializada e Comprometida
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Section Tag */}
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-red-600/10 border border-red-600/30 text-red-600 text-xs font-heading font-bold uppercase tracking-widest">
